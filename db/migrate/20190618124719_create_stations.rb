@@ -4,8 +4,8 @@ class CreateStations < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :space
       t.integer :free_bikes
-      t.latitude :float
-      t.longitude :float
+      t.float :latitude
+      t.float :longitude
 
       t.timestamps
     end
