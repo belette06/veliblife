@@ -22,6 +22,7 @@ gem 'sidekiq', '~> 5.2', '>= 5.2.7'
 gem 'sidekiq-scheduler', '~> 3.0'
 gem 'redis-rails'
 gem 'redis-rack-cache'
+gem 'leaflet-rails', '~> 0.7.7'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

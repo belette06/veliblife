@@ -1,6 +1,10 @@
 require 'pry'
 <h1>Stations#index</h1>
 
+
+<div id='map'></div>
+
+
 <H2>il y a <%= @stations.count %> stations</H2>
 
 <div>
@@ -10,3 +14,14 @@ require 'pry'
   <% end %>
 
 </div>
+
+    <script type="text/javascript">
+
+    var map = L.map('map').setView([50.28895538456755, 18.681907653808594], 16);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+</script>
+
