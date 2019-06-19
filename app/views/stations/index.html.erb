@@ -1,9 +1,11 @@
+require 'pry'
 <h1>Stations#index</h1>
 
 
 
 <div>
-  <% @velibs["network"].each do |velib| %>
-    <%= velib %>
+  <%= @stations.each do |velib| %>
+    <%=binding.pry %>
+    <%= velib  %>
   <% end %>
 </div>

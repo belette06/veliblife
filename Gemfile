@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'pry', '~> 0.12.2'
 gem 'uglifier', '>= 1.3.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'faker', '~> 1.9', '>= 1.9.3'
@@ -19,12 +20,14 @@ gem 'geocoder', '~> 1.5', '>= 1.5.1'
 gem 'httparty', '~> 0.13.7'
 gem 'sidekiq', '~> 5.2', '>= 5.2.7'
 gem 'sidekiq-scheduler', '~> 3.0'
-
+gem 'redis-rails'
+gem 'redis-rack-cache'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 5.0', '>= 5.0.2'
   gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
+  gem 'dotenv-rails'
 end
 
 group :development do
