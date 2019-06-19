@@ -1,11 +1,12 @@
 require 'pry'
 <h1>Stations#index</h1>
 
-
+<H2>il y a <%= @stations.count %> stations</H2>
 
 <div>
-  <%= @stations.each do |velib| %>
-    <%=binding.pry %>
-    <%= velib  %>
+  <% @stations.each do |station| %>
+    <%= station.name  %><br/>
+
   <% end %>
+
 </div>

@@ -9,4 +9,4 @@ production:
 :schedule:
   StationsinfoJob:
     cron: '1 * * * * *'   # Runs once per minute
-    class: StationinfoJob
+    class: StationJob

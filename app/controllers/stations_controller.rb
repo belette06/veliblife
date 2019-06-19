@@ -3,7 +3,6 @@ class StationsController < ApplicationController
     @stations = Station.all
 
 
-
   end
 
 

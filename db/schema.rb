@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_06_18_124719) do
   create_table "stations", force: :cascade do |t|
     t.string "station_id"
     t.string "name"
-    t.integer "space"
+    t.integer "empty_slots"
     t.integer "free_bikes"
     t.float "latitude"
     t.float "longitude"
