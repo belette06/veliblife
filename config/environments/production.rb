@@ -1,15 +1,16 @@
+# frozen_string_literal: true
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-  config.cache_store = :redis_store, "redis://localhost:6379/0/cache", { expires_in: 90.minutes }
+  config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 90.minutes }
 
   config.action_dispatch.rack_cache = {
-      metastore:  " redis: // localhost: 6380/1 / metastore " ,
-      entitystore:  " redis: // localhost: 6380/1 / entitystore "
+    metastore: ' redis: // localhost: 6380/1 / metastore ',
+    entitystore: ' redis: // localhost: 6380/1 / entitystore '
   }
-
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -18,7 +19,7 @@ Rails.application.configure do
   config.eager_load = true
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local = false
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
@@ -56,10 +57,10 @@ Rails.application.configure do
   config.log_level = :debug
 
   # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
+  config.log_tags = [:request_id]
 
   # Use a different cache store in production.
-  #config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'] }
+  # config.cache_store = :redis_cache_store, { url: ENV['REDIS_URL'] }
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "citybike_production"
@@ -84,7 +85,7 @@ Rails.application.configure do
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
 
-  if ENV["RAILS_LOG_TO_STDOUT"].present?
+  if ENV['RAILS_LOG_TO_STDOUT'].present?
     logger           = ActiveSupport::Logger.new(STDOUT)
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)

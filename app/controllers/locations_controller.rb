@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
 class LocationsController < ApplicationController
   def index
-    if params[:search].present?
-      @locations = Location.near(params[:search], 50, :order => :distance)
-    else
-      @locations = Location.all
-    end
+    @locations = if params[:search].present?
+                   Location.near(params[:search], 50, order: :distance)
+                 else
+                   Location.all
+                 end
   end
 
   def show
@@ -18,7 +20,7 @@ class LocationsController < ApplicationController
   def create
     @location = Location.new(allowed_params)
     if @location.save
-      redirect_to @location, :notice => "Successfully created location."
+      redirect_to @location, notice: 'Successfully created location.'
     else
       render :new
     end
@@ -31,7 +33,7 @@ class LocationsController < ApplicationController
   def update
     @location = Location.find(params[:id])
     if @location.update_attributes(allowed_params)
-      redirect_to @location, :notice  => "Successfully updated location."
+      redirect_to @location, notice: 'Successfully updated location.'
     else
       render :edit
     end
@@ -41,7 +43,7 @@ class LocationsController < ApplicationController
     @location = Location.find(params[:id])
     @location.destroy
 
-    redirect_to locations_url, :notice => "Successfully destroyed location."
+    redirect_to locations_url, notice: 'Successfully destroyed location.'
   end
 
   private

@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :station do
-    name { "MyString" }
+    name { 'MyString' }
     space { 1 }
     free_bikes { 1 }
     latitude { 1.5 }
