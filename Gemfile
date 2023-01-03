@@ -10,7 +10,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'coffee-rails', '~> 4.2'
 gem 'faker', '~> 1.9', '>= 1.9.3'
 gem 'geocoder', '~> 1.5', '>= 1.5.1'
-gem 'httparty', '~> 0.13.7'
+gem 'httparty', '~> 0.21.0'
 gem 'jbuilder', '~> 2.5'
 gem 'leaflet-rails', '~> 0.7.7'
 gem 'pg', '>= 0.18', '< 2.0'
